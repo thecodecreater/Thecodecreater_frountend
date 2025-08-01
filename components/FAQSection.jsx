@@ -9,22 +9,20 @@ export default function FAQSection() {
   const [open, setOpen] = useState(null);
 
   useEffect(() => {
-    const fetchFaqs = async () => {
-      setLoading(true);
-      try {
-        const res = await fetch(API_URL);
-        const data = await res.json();
-        setFaqs(data);
-      } catch (err) {
-        setFaqs([]);
-      }
-      setLoading(false);
-    };
-    fetchFaqs();
-    // Optionally, you can add polling here for near-instant updates
-    const interval = setInterval(fetchFaqs, 5000); // Poll every 5s
-    return () => clearInterval(interval);
-  }, []);
+  const fetchFaqs = async () => {
+    setLoading(true);
+    try {
+      const res = await fetch(API_URL);
+      const data = await res.json();
+      setFaqs(data);
+    } catch (err) {
+      setFaqs([]);
+    }
+    setLoading(false);
+  };
+  fetchFaqs();
+  // Removed interval polling for FAQ fetch
+}, []);
 
   return (
     <section id="faq" className="py-20 px-4  vignette">
