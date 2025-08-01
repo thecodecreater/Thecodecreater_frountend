@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600;700&family=Montserrat:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', 'Inter', 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30 0%, #232526 60%, #000000 100%);
+  min-height: 100vh;
+  color: #e0e0e0;
+  position: relative;
+}
+
+/* Vignette effect for depth */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  box-shadow: 0 0 200px 80px #000 inset, 0 0 120px 40px #420000 inset;
+}
+
+/* Premium gradient background utility */
+.bg-premium-gradient {
+  background: linear-gradient(135deg, #141e30 0%, #232526 60%, #000000 100%);
+} 
+
+/* Neon blue glow utility */
+.neon-glow {
+  text-shadow: 0 0 8px #00FFFF, 0 0 16px #00FFFF99, 0 0 2px #fff;
+  color: #fff;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: rgba(20, 30, 48, 0.80);
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.45), 0 0 12px 2px #00FFFF33;
+  border: 1.5px solid #00FFFF44;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: box-shadow 0.3s, border-color 0.3s, background 0.3s;
+}
+
+/* Gradient text utility for logo-style headings */
+.gradient-logo {
+  background: linear-gradient(90deg, #00fff0 0%, #6f47ff 60%, #ff4ecd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient glassmorphism box backgrounds */
+.gradient-bg-box {
+  background: linear-gradient(135deg, #141e30 0%, #232526 60%, #000000 100%);
+  box-shadow: 0 0 24px 4px #00FFFF44, 0 0 8px #7f3cff99;
+  border: 1.5px solid #00FFFF66;
+  backdrop-filter: blur(10px);
+}
+
+/* Neon button utility */
+.neon-btn {
+  @apply border-2 border-cyan-400 text-white font-bold rounded-xl px-6 py-3 bg-transparent transition-glow duration-300 ease-in-out;
+  box-shadow: 0 0 8px #00FFFF99;
+  position: relative;
+  overflow: hidden;
+}
+.neon-btn:hover, .neon-btn:focus {
+  background: #00FFFF22;
+  color: #00FFFF;
+  border-color: #00FFFF;
+  box-shadow: 0 0 24px 4px #00FFFFcc, 0 0 8px #00FFFF99;
+  transform: scale(1.04);
+}
+
+/* Heading glow utility */
+.heading-glow {
+  @apply neon-glow uppercase font-extrabold text-white;
+  letter-spacing: 0.04em;
+}
+
+/* Subtext utility */
+.subtext-premium {
+  color: #b0b0b0;
+  font-weight: 400;
+  font-family: 'Inter', 'Montserrat', Arial, sans-serif;
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #141e30;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00FFFF 10%, #7f3cff 90%);
+  border-radius: 8px;
+  border: 2px solid #232526;
+}
+hr, .divider, .section-divider {
+  display: none !important;
+  height: 0 !important;
+  background: none !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+* {
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s, background 0.3s, color 0.3s;
+}

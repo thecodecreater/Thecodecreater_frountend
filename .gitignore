@@ -1,0 +1,9 @@
+# React + Node.js combined
+node_modules/
+build/
+dist/
+.env
+.vscode/
+.idea/
+.DS_Store
+npm-debug.log*

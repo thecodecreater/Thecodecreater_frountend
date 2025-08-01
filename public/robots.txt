@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin-dashboard
+Disallow: /user-dashboard
+Allow: /
+
+Sitemap: https://thecodecreater.com/sitemap.xml
+Sitemap: https://yourwebsite.com/sitemap.xml
