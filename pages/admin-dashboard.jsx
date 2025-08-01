@@ -5,7 +5,7 @@ import AdminMessagesList from '../components/AdminMessagesList';
 import AdminBlogsCRUD from '../components/AdminBlogsCRUD';
 import AdminTestimonialsCRUD from '../components/AdminTestimonialsCRUD';
 import AdminCommentsModeration from '../components/AdminCommentsModeration';
-import UserAdminChat from '../components/UserAdminChat';
+
 
 import Head from 'next/head';
 
@@ -143,7 +143,7 @@ export default function AdminDashboard() {
             )}
           </div>
           <div className="flex-1 bg-white/80 rounded-xl border border-gold/30 shadow-md p-2">
-            {selectedUser && <UserAdminChat user={selectedUser} isAdmin={true} />}
+            {selectedUser && <div className="text-slate-400">Chat feature coming soon.</div>}
           </div>
         </div>
       </div>
