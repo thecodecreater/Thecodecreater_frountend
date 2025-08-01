@@ -4,7 +4,7 @@ const packages = [
   {
     color: "bg-gradient-to-r from-green-400 to-cyan-400",
     icon: "🟢",
-    title: "Starter – ₹2499",
+    title: "Starter – Best for Simple Sites",
     features: [
       "1-Page Static Website",
       "Mobile Responsive",
@@ -15,7 +15,7 @@ const packages = [
   {
     color: "bg-gradient-to-r from-blue-500 to-cyan-400",
     icon: "🔵",
-    title: "Standard – ₹8,499",
+    title: "Standard – Most Popular",
     features: [
       "3–5 Pages",
       "Modern UI",
@@ -27,13 +27,13 @@ const packages = [
   {
     color: "bg-gradient-to-r from-fuchsia-500 to-blue-400",
     icon: "🟣",
-    title: "Premium – ₹19,999+",
+    title: "Premium – For Growing Brands",
     features: [
       "Full Stack Website (Next.js + Tailwind CSS)",
       "Admin Panel in React.js",
       "Backend: Node.js + Express + MongoDB",
       "Hosting + Live Deployment",
-      "Final price based on features"
+      "Custom features available"
     ]
   }
 ];

@@ -83,7 +83,7 @@ export default function Home() {
                 <li>Fast Loading, SEO Ready</li>
                 <li>Social Links Integration</li>
               </ul>
-              <div className="text-2xl font-bold text-[#7be0f6] mb-2">Starting at ₹7,999</div>
+              <div className="text-lg font-semibold text-[#7be0f6] mb-2">Affordable for every business</div>
             </div>
             {/* Growth Accelerator */}
             <div className="bg-[#151e34]/80 rounded-2xl border border-[#243354] shadow-md backdrop-blur p-8 flex flex-col items-center hover:scale-105 hover:shadow-xl transition-all duration-200">
@@ -97,7 +97,7 @@ export default function Home() {
                 <li>Basic Analytics Setup</li>
                 <li>Speed & Security Optimized</li>
               </ul>
-              <div className="text-2xl font-bold text-[#7be0f6] mb-2">Starting at ₹14,999</div>
+              <div className="text-lg font-semibold text-[#7be0f6] mb-2">Great value, full support</div>
             </div>
             {/* E-Commerce Suite */}
             <div className="bg-[#151e34]/80 rounded-2xl border border-[#243354] shadow-md backdrop-blur p-8 flex flex-col items-center hover:scale-105 hover:shadow-xl transition-all duration-200">
@@ -111,7 +111,7 @@ export default function Home() {
                 <li>Offers & Coupons</li>
                 <li>Admin Dashboard</li>
               </ul>
-              <div className="text-2xl font-bold text-[#7be0f6] mb-2">Starting at ₹24,999</div>
+              <div className="text-lg font-semibold text-[#7be0f6] mb-2">Contact for best quote</div>
             </div>
             {/* Enterprise Presence */}
             <div className="bg-[#151e34]/80 rounded-2xl border border-[#243354] shadow-md backdrop-blur p-8 flex flex-col items-center hover:scale-105 hover:shadow-xl transition-all duration-200">
@@ -125,7 +125,7 @@ export default function Home() {
                 <li>API Integrations</li>
                 <li>Priority Support</li>
               </ul>
-              <div className="text-2xl font-bold text-[#7be0f6] mb-2">Starting at ₹39,999</div>
+              <div className="text-lg font-semibold text-[#7be0f6] mb-2">Tailored to your needs</div>
             </div>
             {/* Custom Experience */}
             <div className="bg-[#151e34]/80 rounded-2xl border border-[#243354] shadow-md backdrop-blur p-8 flex flex-col items-center hover:scale-105 hover:shadow-xl transition-all duration-200 md:col-span-2 lg:col-span-1">
@@ -139,7 +139,7 @@ export default function Home() {
                 <li>Consultation & Planning</li>
                 <li>Dedicated Project Manager</li>
               </ul>
-              <div className="text-2xl font-bold text-[#7be0f6] mb-2">Custom Quote</div>
+              <div className="text-lg font-semibold text-[#7be0f6] mb-2">Fully customized solution</div>
             </div>
           </div>
           <div className="text-center mt-10">
