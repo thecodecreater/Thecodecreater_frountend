@@ -7,25 +7,25 @@ const contactInfo = [
   {
     title: 'Address',
     value: 'Matki Choraha Jodhpur, Rajasthan, India',
-    icon: <FaMapMarkerAlt />,
+    icon: FaMapMarkerAlt,
     color: 'bg-accent-blue',
   },
   {
     title: 'Phone',
     value: '+91 93519 01225, +91 94621 85555',
-    icon: <FaPhoneAlt />,
+    icon: FaPhoneAlt,
     color: 'bg-accent-blue',
   },
   {
     title: 'Email',
     value: 'thecodecreater964@gmail.com',
-    icon: <FaEnvelope />,
+    icon: FaEnvelope,
     color: 'bg-accent-blue',
   },
   {
     title: 'WhatsApp',
     value: '+91 94621 85555',
-    icon: <FaWhatsapp />,
+    icon: FaWhatsapp,
     color: 'bg-accent-blue',
   },
 ];
@@ -33,26 +33,26 @@ const contactInfo = [
 const socialLinks = [
   {
     title: 'Facebook',
-    href: 'https://www.facebook.com/thecodecreater',
-    icon: <FaFacebook />,
+    href: 'https://www.facebook.com/share/1CCojCjh28/',
+    icon: FaFacebook,
     color: 'text-facebook',
   },
   {
     title: 'Twitter',
     href: 'https://twitter.com/thecodecreater',
-    icon: <FaTwitter />,
+    icon: FaTwitter,
     color: 'text-twitter',
   },
   {
     title: 'Instagram',
     href: 'https://www.instagram.com/thecodecreater',
-    icon: <FaInstagram />,
+    icon: FaInstagram,
     color: 'text-instagram',
   },
   {
     title: 'LinkedIn',
     href: 'https://www.linkedin.com/in/thecodecreater',
-    icon: <FaLinkedin />,
+    icon: FaLinkedin,
     color: 'text-linkedin',
   },
 ];
@@ -112,9 +112,9 @@ export default function ContactPage() {
         <section className="w-full flex flex-col items-center justify-center min-h-[400px] md:min-h-[500px] bg-premium-gradient rounded-b-3xl shadow-2xl mb-10 overflow-hidden">
           <div className="flex flex-col items-center justify-center h-full py-16">
             <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 animate-fade-in flex items-center gap-3">
-  <FaPaperPlane className="text-accent-blue" />
-  Contact Us
-</h1>
+              <FaPaperPlane className="text-accent-blue" />
+              Contact Us
+            </h1>
             <p className="text-lg subtext-premium text-center font-medium max-w-2xl animate-fade-in-slow">
               We'd love to hear from you! Reach out for any queries, projects, or just to say hello.
             </p>
@@ -125,7 +125,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, i) => (
               <div key={i} className={`glass-card p-6 flex flex-col items-center justify-center rounded-2xl shadow-lg bg-gradient-to-br ${info.color}`}>
-                <div className="mb-3 text-accent-blue">{info.icon}</div>
+                <div className="mb-3 text-accent-blue">
+                  <info.icon />
+                </div>
                 <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
                 <p className="subtext-premium text-sm">{info.value}</p>
               </div>
@@ -143,18 +145,12 @@ export default function ContactPage() {
                   <FaMapMarkerAlt className="text-accent-blue" /> Get in Touch
                 </h2>
                 <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-white/90">
-                    <FaPhoneAlt className="text-accent-blue text-xl" />
-                    <span>+91 93519 01225, +91 94621 85555</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white/90">
-                    <FaEnvelope className="text-accent-blue text-xl" />
-                    <span>thecodecreater964@gmail.com</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white/90">
-                    <FaWhatsapp className="text-accent-blue text-xl" />
-                    <span>+91 93519 01225</span>
-                  </div>
+                  {contactInfo.map((item, i) => (
+                    <div key={i} className="flex items-center gap-3 text-white/90">
+                      <item.icon className="text-accent-blue text-xl" />
+                      <span>{item.value}</span>
+                    </div>
+                  ))}
                 </div>
                 <div className="border-t border-accent-blue/20 pt-6">
                   <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
@@ -168,7 +164,7 @@ export default function ContactPage() {
                         className={`text-accent-blue ${social.color} transition-colors duration-300 hover:scale-110`}
                         title={social.title}
                       >
-                        {social.icon}
+                        <social.icon />
                       </a>
                     ))}
                   </div>
