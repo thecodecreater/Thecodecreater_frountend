@@ -2,9 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import UserSidebar from '../components/UserSidebar';
-import UserTopbar from '../components/UserTopbar';
-import UserMessagesSection from '../components/UserMessagesSection';
+
 import ProfileUpdateModal from '../components/ProfileUpdateModal';
 
 export default function UserDashboard() {
