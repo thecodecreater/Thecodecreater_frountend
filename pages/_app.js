@@ -9,9 +9,7 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <Header />
       <StarfieldBg />
-      <AnimatePresence mode="wait">
-        <Component {...pageProps} key={router.route} />
-      </AnimatePresence>
+      <Component {...pageProps} />
       <WhatsAppFloatingButton />
     </>
   );

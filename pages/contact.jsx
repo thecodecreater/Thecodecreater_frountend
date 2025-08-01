@@ -6,7 +6,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp, FaPaperPlane } from
 const contactInfo = [
   {
     title: 'Address',
-    value: '123 Main St, Anytown, USA',
+    value: 'Matki Choraha Jodhpur, Rajasthan, India',
     icon: <FaMapMarkerAlt />,
     color: 'bg-accent-blue',
   },
@@ -24,7 +24,7 @@ const contactInfo = [
   },
   {
     title: 'WhatsApp',
-    value: '+91 93519 01225',
+    value: '+91 94621 85555',
     icon: <FaWhatsapp />,
     color: 'bg-accent-blue',
   },
@@ -34,25 +34,25 @@ const socialLinks = [
   {
     title: 'Facebook',
     href: 'https://www.facebook.com/thecodecreater',
-    icon: <FaPaperPlane />,
+    icon: <FaFacebook />,
     color: 'text-facebook',
   },
   {
     title: 'Twitter',
     href: 'https://twitter.com/thecodecreater',
-    icon: <FaPaperPlane />,
+    icon: <FaTwitter />,
     color: 'text-twitter',
   },
   {
     title: 'Instagram',
     href: 'https://www.instagram.com/thecodecreater',
-    icon: <FaPaperPlane />,
+    icon: <FaInstagram />,
     color: 'text-instagram',
   },
   {
     title: 'LinkedIn',
     href: 'https://www.linkedin.com/in/thecodecreater',
-    icon: <FaPaperPlane />,
+    icon: <FaLinkedin />,
     color: 'text-linkedin',
   },
 ];
