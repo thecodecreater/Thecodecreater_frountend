@@ -1,60 +1,67 @@
 import * as FaIcons from 'react-icons/fa';
 import Header from '../../components/Header';
 
-const featuresList = [
-  {
-    icon: <FaIcons.FaStar className="text-accent-blue text-2xl" />,
-    text: 'Expert team with years of experience',
+// Static data for each service slug
+const serviceData = {
+  'graphic-design': {
+    featuresList: [
+      { icon: <FaIcons.FaPaintBrush className="text-accent-blue text-2xl" />, text: 'Creative branding and logo design' },
+      { icon: <FaIcons.FaPalette className="text-accent-blue text-2xl" />, text: 'Social media & print graphics' },
+      { icon: <FaIcons.FaImage className="text-accent-blue text-2xl" />, text: 'Custom illustrations & icons' },
+      { icon: <FaIcons.FaUserCheck className="text-accent-blue text-2xl" />, text: 'Client-focused creative process' },
+      { icon: <FaIcons.FaClock className="text-accent-blue text-2xl" />, text: 'Quick turnaround & support' },
+    ],
+    processList: [
+      { icon: <FaIcons.FaSearch className="text-accent-blue text-xl" />, title: 'Brief', desc: 'Understanding your vision' },
+      { icon: <FaIcons.FaLightbulb className="text-accent-blue text-xl" />, title: 'Ideation', desc: 'Concept & moodboard' },
+      { icon: <FaIcons.FaPencilAlt className="text-accent-blue text-xl" />, title: 'Design', desc: 'Drafts & revisions' },
+      { icon: <FaIcons.FaCheckCircle className="text-accent-blue text-xl" />, title: 'Delivery', desc: 'Final files & formats' },
+      { icon: <FaIcons.FaSmile className="text-accent-blue text-xl" />, title: 'Support', desc: 'Post-project help' },
+    ]
   },
-  {
-    icon: <FaIcons.FaLock className="text-accent-blue text-2xl" />,
-    text: 'Modern, scalable & secure solutions',
+  'web-development': {
+    featuresList: [
+      { icon: <FaIcons.FaCode className="text-accent-blue text-2xl" />, text: 'Modern website & web app development' },
+      { icon: <FaIcons.FaMobileAlt className="text-accent-blue text-2xl" />, text: 'Responsive & mobile-first design' },
+      { icon: <FaIcons.FaRocket className="text-accent-blue text-2xl" />, text: 'Performance & SEO optimized' },
+      { icon: <FaIcons.FaLock className="text-accent-blue text-2xl" />, text: 'Secure & scalable solutions' },
+      { icon: <FaIcons.FaTools className="text-accent-blue text-2xl" />, text: 'Ongoing maintenance & support' },
+    ],
+    processList: [
+      { icon: <FaIcons.FaSearch className="text-accent-blue text-xl" />, title: 'Consult', desc: 'Project requirements' },
+      { icon: <FaIcons.FaProjectDiagram className="text-accent-blue text-xl" />, title: 'Plan', desc: 'Wireframe & roadmap' },
+      { icon: <FaIcons.FaLaptopCode className="text-accent-blue text-xl" />, title: 'Develop', desc: 'Coding & integration' },
+      { icon: <FaIcons.FaCheckCircle className="text-accent-blue text-xl" />, title: 'Launch', desc: 'Testing & go-live' },
+      { icon: <FaIcons.FaChartLine className="text-accent-blue text-xl" />, title: 'Grow', desc: 'Analytics & support' },
+    ]
   },
-  {
-    icon: <FaIcons.FaUserCheck className="text-accent-blue text-2xl" />,
-    text: 'Client-focused approach & transparent process',
-  },
-  {
-    icon: <FaIcons.FaClock className="text-accent-blue text-2xl" />,
-    text: 'On-time delivery & dedicated support',
-  },
-  {
-    icon: <FaIcons.FaMoneyBillWave className="text-accent-blue text-2xl" />,
-    text: 'Affordable pricing with premium quality',
-  },
+  // Add more services here as needed
+};
+
+// Default data if slug not found
+const defaultFeaturesList = [
+  { icon: <FaIcons.FaStar className="text-accent-blue text-2xl" />, text: 'Expert team with years of experience' },
+  { icon: <FaIcons.FaLock className="text-accent-blue text-2xl" />, text: 'Modern, scalable & secure solutions' },
+  { icon: <FaIcons.FaUserCheck className="text-accent-blue text-2xl" />, text: 'Client-focused approach & transparent process' },
+  { icon: <FaIcons.FaClock className="text-accent-blue text-2xl" />, text: 'On-time delivery & dedicated support' },
+  { icon: <FaIcons.FaMoneyBillWave className="text-accent-blue text-2xl" />, text: 'Affordable pricing with premium quality' },
 ];
 
-const processList = [
-  {
-    icon: <FaIcons.FaSearch className="text-accent-blue text-xl" />,
-    title: 'Discovery',
-    desc: 'Understanding your business needs',
-  },
-  {
-    icon: <FaIcons.FaProjectDiagram className="text-accent-blue text-xl" />,
-    title: 'Strategy',
-    desc: 'Planning & strategy discussion',
-  },
-  {
-    icon: <FaIcons.FaPencilRuler className="text-accent-blue text-xl" />,
-    title: 'Design & Build',
-    desc: 'Design & development with regular updates',
-  },
-  {
-    icon: <FaIcons.FaCheckCircle className="text-accent-blue text-xl" />,
-    title: 'Launch',
-    desc: 'Testing, feedback & launch',
-  },
-  {
-    icon: <FaIcons.FaChartLine className="text-accent-blue text-xl" />,
-    title: 'Growth',
-    desc: 'Ongoing support & growth',
-  },
+const defaultProcessList = [
+  { icon: <FaIcons.FaSearch className="text-accent-blue text-xl" />, title: 'Discovery', desc: 'Understanding your business needs' },
+  { icon: <FaIcons.FaProjectDiagram className="text-accent-blue text-xl" />, title: 'Strategy', desc: 'Planning & strategy discussion' },
+  { icon: <FaIcons.FaPencilRuler className="text-accent-blue text-xl" />, title: 'Design & Build', desc: 'Design & development with regular updates' },
+  { icon: <FaIcons.FaCheckCircle className="text-accent-blue text-xl" />, title: 'Launch', desc: 'Testing, feedback & launch' },
+  { icon: <FaIcons.FaChartLine className="text-accent-blue text-xl" />, title: 'Growth', desc: 'Ongoing support & growth' },
 ];
 
 function ServiceDetails({ service }) {
   if (!service) return <div className="min-h-screen flex items-center justify-center text-2xl text-red-500">Service not found</div>;
   const IconComp = FaIcons[service.icon] || FaIcons['FaCode'];
+  // Get slug from title (same logic as getStaticProps)
+  const slug = service.title.toLowerCase().replace(/\s+/g, '-');
+  const featuresList = serviceData[slug]?.featuresList || defaultFeaturesList;
+  const processList = serviceData[slug]?.processList || defaultProcessList;
   return (
     <>
       <Header />

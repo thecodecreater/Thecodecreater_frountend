@@ -50,7 +50,7 @@ export default function FAQSection() {
               </span>
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out px-6 ${open === idx ? 'max-h-40 py-2' : 'max-h-0 py-0'}`}
+              className={`overflow-hidden transition-all duration-300 ease-in-out px-6 ${open === idx ? 'max-h-[1000px] py-2' : 'max-h-0 py-0'}`}
               style={{ color: '#b0b0b0' }}
             >
               {open === idx && (

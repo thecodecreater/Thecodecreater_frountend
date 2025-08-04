@@ -96,7 +96,7 @@ export default function About() {
             <span className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-black/60 border-4 border-accent-blue shadow-neon-blue mb-4 animate-fade-in">
               <FaBuilding className="text-5xl text-accent-blue" />
             </span>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-2 text-center drop-shadow-lg animate-fade-in-slow">About Moer Nunie Digital Agency</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-2 text-center drop-shadow-lg animate-fade-in-slow">About Tcodecreater Digital Agency</h1>
             <div className="h-1 w-24 mx-auto rounded-full bg-gradient-to-r from-accent-blue via-primary-dark to-accent-blue mb-4 animate-grow"></div>
             <p className="text-lg subtext-premium text-center font-medium max-w-2xl animate-fade-in-slow">
               Empowering businesses with next-gen digital solutions. We're a team of passionate creators, developers, designers, and marketers committed to delivering results.
@@ -142,7 +142,7 @@ export default function About() {
                   <FaUsers className="text-accent-blue text-3xl" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Hardik Ranka</h3>
-                <p className="text-accent-blue font-semibold mb-3">Co-Founder & Full-Stack Developer</p>
+                <p className="text-accent-blue font-semibold mb-3">Second Founder & Full-Stack Developer</p>
                 <p className="subtext-premium text-sm">
                   Creative, scalable, and affordable tech solutions for businesses and startups. Committed to digital growth and innovation.
                 </p>

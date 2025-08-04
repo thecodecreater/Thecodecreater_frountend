@@ -49,7 +49,7 @@ export default function PackagesSection() {
             <h3 className="text-xl font-bold mb-3 gradient-logo text-center">{pkg.title}</h3>
             <ul className="text-sm text-white/90 mb-4 space-y-2 text-center">
               {pkg.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
+                <li key={i} className="text-center">{feature}</li>
               ))}
             </ul>
             <button className="neon-btn w-full mt-auto">Get Started</button>
