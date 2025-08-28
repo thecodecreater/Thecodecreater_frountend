@@ -26,6 +26,20 @@ yarn-error.log*
 .env*.local
 .env
 
+# Backup files
+*-backup.js
+*.bak
+*~
+*#
+
+# Temporary files
+.temp/
+.tmp/
+*.tmp
+*.swp
+*~
+.~*
+
 # vercel
 .vercel
 
