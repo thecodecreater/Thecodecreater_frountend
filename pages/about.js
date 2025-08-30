@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Image from 'next/image';
-import { FiAward, FiUsers, FiLayers, FiCode, FiGlobe, FiTrendingUp, FiChevronRight } from 'react-icons/fi';
+import { FiAward, FiUsers, FiLayers, FiCode, FiGlobe, FiTrendingUp, FiChevronRight, FiMenu, FiX } from 'react-icons/fi';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -71,6 +71,7 @@ const About = () => {
 
   // Add state for header scroll effect
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -147,14 +148,32 @@ const About = () => {
             </nav>
 
             {/* Mobile menu button - Hidden for now as we have the main header */}
-            <button className="lg:hidden text-white hover:text-orange-300 p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="lg:hidden text-white hover:text-orange-300 p-2"
+            >
+              {isMobileMenuOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </header>
+
+      {/* Mobile Sidebar */}
+      {isMobileMenuOpen && (
+        <motion.div
+          initial={{ x: '-100%' }}
+          animate={{ x: 0 }}
+          exit={{ x: '-100%' }}
+          transition={{ duration: 0.3 }}
+          className="fixed top-0 left-0 w-64 h-full bg-gray-900/95 backdrop-blur-md shadow-2xl z-40 p-6 flex flex-col space-y-4 lg:hidden"
+        >
+          <Link href="/" className="text-white hover:text-orange-400 text-lg font-medium py-2">Home</Link>
+          <Link href="/about" className="text-orange-400 text-lg font-medium py-2">About Us</Link>
+          <a href="#services" className="text-white hover:text-orange-400 text-lg font-medium py-2">Services</a>
+          <a href="#portfolio" className="text-white hover:text-orange-400 text-lg font-medium py-2">Portfolio</a>
+          <a href="#contact" className="text-white hover:text-orange-400 text-lg font-medium py-2">Contact</a>
+        </motion.div>
+      )}
 
       {/* Breadcrumb */}
       <div className="pt-32 pb-16 bg-gradient-to-r from-gray-900 to-gray-800">

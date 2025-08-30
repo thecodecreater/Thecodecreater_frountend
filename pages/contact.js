@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import { useState } from 'react';
-import { FiMail, FiPhone, FiMapPin, FiSend, FiClock, FiCheckCircle } from 'react-icons/fi';
+import { FiMail, FiPhone, FiMapPin, FiSend, FiClock, FiCheckCircle, FiInstagram } from 'react-icons/fi';
 import Header from '../components/Header';
 
 const Contact = () => {
@@ -307,7 +307,7 @@ const Contact = () => {
                   {[
                     { name: 'Twitter', icon: 'FiTwitter', url: '#' },
                     { name: 'Facebook', icon: 'FiFacebook', url: '#' },
-                    { name: 'Instagram', icon: 'FiInstagram', url: '#' },
+                    { name: 'Instagram', icon: 'FiInstagram', url: 'https://www.instagram.com/thecodecreater' },
                     { name: 'LinkedIn', icon: 'FiLinkedin', url: '#' },
                   ].map((social) => (
                     <a
@@ -321,7 +321,7 @@ const Contact = () => {
                       {/* Icons are not dynamically imported in this example */}
                       {social.icon === 'FiTwitter' && <span className="text-lg">𝕏</span>}
                       {social.icon === 'FiFacebook' && <span className="text-lg">f</span>}
-                      {social.icon === 'FiInstagram' && <span className="text-lg">📸</span>}
+                      {social.icon === 'FiInstagram' && <FiInstagram className="w-5 h-5" />}
                       {social.icon === 'FiLinkedin' && <span className="text-lg">in</span>}
                     </a>
                   ))}
@@ -337,13 +337,13 @@ const Contact = () => {
         <div className="h-96 w-full bg-gray-700/50">
           {/* Replace with your actual map embed code */}
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573120865!2d-73.98784492421994!3d40.74844057138947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.090806093978!2d72.99727641503245!3d26.25978698340726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4d2f1ebd21%3A0x3bcbafb8c7a3b53f!2sJodhpur%2C%20Rajasthan%20342001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
-            title="Our Location"
+            title="Our Location in Jodhpur"
           ></iframe>
         </div>
       </section>

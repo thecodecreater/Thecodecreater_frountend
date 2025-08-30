@@ -211,22 +211,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Company Logos */}
-        <motion.div 
-          className="mt-20 grid grid-cols-3 md:grid-cols-6 gap-6 items-center opacity-70"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 0.7, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          {[1, 2, 3, 4, 5, 6].map((item) => (
-            <div key={item} className="flex justify-center opacity-70 hover:opacity-100 transition-opacity">
-              <div className="h-10 w-24 md:h-12 md:w-32 bg-gray-800 rounded-lg flex items-center justify-center p-2">
-                <span className="text-gray-500 text-xs md:text-sm font-medium">Client {item}</span>
-              </div>
-            </div>
-          ))}
-        </motion.div>
+        {/* Company Logos Section Removed */}
       </div>
     </section>
   );

@@ -13,11 +13,11 @@ const FAQ = () => {
     },
     {
       question: 'How much does a website cost?',
-      answer: 'Website costs vary based on your needs, starting from $3,000 for basic sites. We provide transparent pricing after understanding your specific requirements. Contact us for a free quote.'
+      answer: 'The cost of a website depends on your goals, features, and complexity. A simple portfolio site and a full-scale e-commerce platform have very different requirements. Thats why we dont believe in one-size-fits-all pricing. Once we understand your business needs, we’ll provide you with a tailored, transparent quote that fits your budget. You can also request a free consultation to get clarity on the best option for you.'
     },
     {
       question: 'How long does development take?',
-      answer: 'Timelines depend on project complexity. A standard website takes 4-8 weeks, while custom applications may take 3-6 months. We provide a detailed timeline after our initial consultation.'
+      answer: 'The timeline depends on the scope and complexity of your project. Simple websites can be ready quickly, while larger, custom solutions take more time. After understanding your requirements, we’ll provide a clear schedule tailored to your needs.'
     },
     {
       question: 'Do you offer website maintenance?',
